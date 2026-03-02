@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Operations</title>
+<style>
+body{
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+.box{
+width: 400px;
+margin: auto;
+padding: 20px;
+border: 2px solid black;
+border-radius: 10px;
+}
+h3{
+color: darkblue;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Array Operations</h2>
+<div id="arrayOutput"></div>
+</div>
+
+<script>
+let numbers=[10,25,5,40,15,30];
+
+let sum=0;
+let largest=numbers[0];
+
+for(let i=0;i<numbers.length;i++){
+sum+=numbers[i];
+if(numbers[i]>largest){
+largest=numbers[i];
+}
+}
+
+let reverse=numbers.slice().reverse();
+
+document.getElementById("arrayOutput").innerHTML=
+"<h3>Array: "+numbers+"</h3>"+
+"<h3>Sum: "+sum+"</h3>"+
+"<h3>Largest Number: "+largest+"</h3>"+
+"<h3>Reverse Order: "+reverse+"</h3>";
+</script>
+
+</body>
+</html>
